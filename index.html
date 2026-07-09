@@ -23,6 +23,7 @@
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -32,7 +33,7 @@
     <div class="hero-copy">
       <p class="eyebrow reveal">SHANTANU DASHASAHASTRA</p>
       <h1 class="reveal">Data<br>Engineer<span class="dot">.</span></h1>
-      <p class="hero-sub reveal">Azure, Databricks, and distributed data systems — with Power BI depth built in.</p>
+      <p class="hero-sub reveal">Azure, Databricks, and distributed data systems — end to end, from raw data to the dashboard it powers.</p>
 
       <div class="stat-strip reveal" id="statStrip" aria-live="polite">
         <div class="stat">
@@ -50,13 +51,13 @@
       </div>
 
       <div class="hero-links reveal">
-        <a href="#certifications" class="btn btn-primary">See certifications</a>
+        <a href="#projects" class="btn btn-primary">See my work</a>
         <a href="#contact" class="btn btn-ghost">Get in touch</a>
       </div>
     </div>
 
     <div class="hero-diagram reveal" role="img" aria-label="Animated diagram of a data pipeline: four source systems feed into a Bronze layer, which flows to Silver, then Gold, then out to Power BI and Microsoft Fabric.">
-      <p class="diagram-caption">How I approach a lakehouse pipeline — hover a stage to highlight it</p>
+      <p class="diagram-caption">Raw data has one job: become reportable. Hover a stage to see how.</p>
       <svg viewBox="0 0 980 260" xmlns="http://www.w3.org/2000/svg" class="pipeline-svg">
         <!-- connector lines: sources into bronze -->
         <g class="connectors">
@@ -130,13 +131,12 @@
     <div class="section-inner">
       <p class="section-eyebrow">About</p>
       <p class="about-text">
-        I'm a Data Engineer working across Azure and Databricks — Delta Lake, medallion architecture, PySpark
-        pipelines, and cloud-native data platforms end to end.
+        I work across the full data stack for a Fortune 500 consumer goods business — Azure, Databricks, Delta
+        Lake, and PySpark pipelines on the engineering side; Power BI, DAX, and stakeholder reporting on the
+        analytics side.
       </p>
       <p class="about-text">
-        I also bring Power BI expertise from supporting enterprise analytics for a Fortune 500 consumer goods
-        business — dashboard architecture, DAX, and stakeholder reporting at scale. Data Engineering is where my
-        focus sits: the modeling and pipelines underneath the reporting layer.
+        Data Engineering is where my focus sits: the modeling and pipelines underneath the reporting layer.
       </p>
     </div>
   </section>
@@ -173,6 +173,7 @@
           </ul>
         </div>
       </div>
+      <p class="skills-connector">Pipelines feed the platform. The platform feeds the dashboard. I build both ends.</p>
     </div>
   </section>
 
@@ -219,11 +220,39 @@
     </div>
   </section>
 
+  <section id="projects" class="section section-alt reveal">
+    <div class="section-inner">
+      <p class="section-eyebrow">Projects</p>
+      <p class="section-note">Three stages of one pipeline — ingestion, transformation, and the report at the end of it.</p>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <span class="stage-tag">01 · Orchestrate</span>
+          <h3>Azure Data Factory Pipeline</h3>
+          <p>End-to-end ADF pipeline — on-prem to cloud migration, incremental loading, and API ingestion, with PySpark-based transformations through a medallion architecture and Git-integrated CI/CD via Azure DevOps.</p>
+          <a href="https://github.com/shantanudash12/DataFactoryProject" target="_blank" rel="noopener" class="project-link">View repo →</a>
+        </div>
+        <div class="project-card">
+          <span class="stage-tag">02 · Transform</span>
+          <h3>Databricks Pipeline Work</h3>
+          <p>JSON ingestion, medallion architecture (Bronze/Silver/Gold), and Delta Lake — built hands-on through Databricks Academy coursework.</p>
+          <a href="https://github.com/shantanudash12/Databrick-Tutorial" target="_blank" rel="noopener" class="project-link">View repo →</a>
+        </div>
+        <div class="project-card project-card-featured">
+          <span class="stage-tag">03 · Report</span>
+          <h3>Power BI — AdventureWorks</h3>
+          <p>An interactive Power BI report on the AdventureWorks dataset — data transformation, modeling, DAX, and visualization, delivering insight into sales performance.</p>
+          <a href="https://github.com/shantanudash12/Power-BI-Adventure-Works-Report" target="_blank" rel="noopener" class="project-link">View repo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer id="contact" class="footer reveal">
   <div class="footer-inner">
-    <p class="footer-quote">"In God we trust. All others must bring data." <span>— W. Edwards Deming</span></p>
+    <p class="footer-quote">"The pipeline and the dashboard are one job, not two — I build both."</p>
     <p class="footer-heading">Let's talk data.</p>
     <div class="footer-links">
       <a href="https://github.com/shantanudash12" target="_blank" rel="noopener">GitHub</a>
