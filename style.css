@@ -205,6 +205,16 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 .skill-list li { padding: 7px 0; border-bottom: 1px solid var(--border); }
 .skill-list li:last-child { border-bottom: none; }
 
+.skills-connector {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent-flow);
+  text-align: center;
+}
+
 /* --- Certifications --- */
 .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .cert-card {
@@ -235,6 +245,36 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 .cert-issuer { margin: 0; font-size: 0.82rem; color: var(--text-muted); }
 .cert-date { margin: 2px 0 0; font-size: 0.74rem; color: var(--text-muted); font-family: var(--font-mono); }
 
+/* --- Projects --- */
+.section-note { color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin-bottom: 36px; }
+
+.project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.project-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.project-card:hover { border-color: var(--accent-flow); transform: translateY(-2px); }
+.project-card-featured { border-color: var(--accent-spark-dim); }
+
+.stage-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-flow);
+  margin-bottom: 14px;
+}
+.project-card-featured .stage-tag { color: var(--accent-spark); }
+
+.project-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+.project-card p { font-size: 0.9rem; color: var(--text-muted); margin: 0 0 16px; flex-grow: 1; }
+.project-link { font-family: var(--font-mono); font-size: 0.82rem; }
+
 /* ===== Footer ===== */
 .footer-quote {
   font-family: var(--font-display);
@@ -257,6 +297,10 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .skills-grid, .cert-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+  .project-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
