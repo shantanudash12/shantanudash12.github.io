@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shantanu Dashasahastra — Power BI Developer, building toward Data Engineering</title>
+<meta name="description" content="Portfolio of Shantanu Dashasahastra — Power BI developer working toward Data Engineering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<nav class="site-nav">
+  <span class="nav-mark">SD</span>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">SHANTANU DASHASAHASTRA</p>
+    <h1>Power BI developer,<br>building toward <span class="accent">Data Engineering.</span></h1>
+    <p class="hero-sub">I design analytics dashboards for a living, and I'm deliberately re-training toward the pipelines and platforms that feed them.</p>
+
+    <div class="trajectory" role="img" aria-label="Career trajectory: currently strongest in BI Reporting, moving toward Data Engineering, roughly 60 percent of the way there.">
+      <div class="trajectory-labels">
+        <span class="point-label">BI Reporting</span>
+        <span class="point-label end">Data Engineering</span>
+      </div>
+      <div class="trajectory-track">
+        <div class="trajectory-fill"></div>
+        <div class="trajectory-marker" style="left: 60%;">
+          <span class="marker-dot"></span>
+          <span class="marker-tag">you are here</span>
+        </div>
+      </div>
+      <p class="trajectory-caption">Currently ~60% of the way there — PySpark-certified, Databricks-trained, still building.</p>
+    </div>
+
+    <div class="hero-links">
+      <a href="#certifications" class="btn btn-primary">See certifications</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow">01 — About</p>
+      <p class="about-text">
+        I'm a Power BI developer working on enterprise-scale analytics for a large consumer goods business —
+        building and maintaining the dashboards that track performance, pricing, and competitive positioning
+        across markets and product segments. Along the way I picked up a habit for chasing down the kind of
+        bugs that hide in plain sight: unit mismatches, filter context leaks, model-level quirks that look like
+        report bugs but aren't.
+      </p>
+      <p class="about-text">
+        Over the past several months I've been deliberately building toward Data Engineering — Databricks,
+        PySpark, and cloud data platforms — because I want to be closer to where the data actually gets shaped,
+        not just where it gets displayed.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-eyebrow">02 — Skills</p>
+      <div class="skills-grid">
+        <div class="skill-group skill-group-primary">
+          <h3>Data Engineering <span class="tag-new">building this</span></h3>
+          <ul class="skill-list">
+            <li>PySpark</li>
+            <li>Databricks (Data Engineering &amp; Advanced Data Engineering)</li>
+            <li>Databricks Data Analysis</li>
+            <li>Azure Data Fundamentals</li>
+            <li>GCP Platform Architecture</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Analytics &amp; BI</h3>
+          <ul class="skill-list">
+            <li>Power BI (DAX, Power Query, data modeling)</li>
+            <li>Tabular Editor</li>
+            <li>Azure DevOps Analytics (OData, incremental refresh)</li>
+            <li>Dashboard architecture at enterprise scale</li>
+            <li>Stakeholder-facing reporting</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>AI-augmented workflow</h3>
+          <ul class="skill-list">
+            <li>Prompt Engineering</li>
+            <li>Context Engineering</li>
+            <li>Agentic AI fundamentals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow">03 — Certifications</p>
+      <div class="cert-grid">
+        <div class="cert-card cert-card-featured">
+          <img src="assets/grow-badge.png" alt="GROW badge — Certified Pyspark Jr. Developer" class="cert-badge-img">
+          <div class="cert-info">
+            <h3>GROW Role Accreditation</h3>
+            <p class="cert-issuer">Cognizant · Certified Pyspark Jr. Developer</p>
+            <p class="cert-date">Feb 2026 — valid till Feb 2028</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge-text" aria-hidden="true">DP-900</div>
+          <div class="cert-info">
+            <h3>Azure Data Fundamentals</h3>
+            <p class="cert-issuer">Microsoft · External certification</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="micro-heading">Also completed</p>
+      <div class="badge-row">
+        <div class="mini-badge">
+          <img src="assets/genai-badge.png" alt="Gen AI Fundamentals badge" class="mini-badge-img">
+        </div>
+        <div class="mini-badge mini-badge-text">Prompt Engineering Foundation</div>
+        <div class="mini-badge mini-badge-text">Context Engineering Foundation</div>
+        <div class="mini-badge mini-badge-text">GCP Platform Architect — Databricks Portal</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-eyebrow">04 — Building toward</p>
+      <p class="section-note">
+        Honest note: my day-to-day project work sits behind an enterprise client's data, so it can't live here.
+        These are the public projects I'm building specifically to prove out the Data Engineering side —
+        in progress, not finished case studies yet.
+      </p>
+      <div class="project-grid">
+        <div class="project-card">
+          <span class="status-tag">planned</span>
+          <h3>End-to-end retail analytics pipeline</h3>
+          <p>Ingest a public retail dataset, transform it with PySpark on Databricks, model it, and surface it in a Power BI dashboard — the BI-to-DE bridge, built once, end to end.</p>
+        </div>
+        <div class="project-card">
+          <span class="status-tag">planned</span>
+          <h3>Large public dataset pipeline</h3>
+          <p>A batch ingestion &amp; transformation pipeline over a large public dataset, focused on getting comfortable with scale, partitioning, and performance rather than a specific business question.</p>
+        </div>
+        <div class="project-card">
+          <span class="status-tag">idea</span>
+          <h3>DAX-to-PySpark translation notes</h3>
+          <p>Write-ups translating Power BI/DAX concepts (measures, filter context, iterators) into their PySpark/SQL equivalents — for myself first, useful to other BI-to-DE movers second.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact" class="footer">
+  <div class="footer-inner">
+    <p class="footer-heading">Let's talk data.</p>
+    <div class="footer-links">
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:you@example.com">Email</a>
+    </div>
+    <p class="footer-fine">Update the links above with your real GitHub, LinkedIn, and email.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
