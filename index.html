@@ -3,6 +3,290 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shantanu Dashasahastra — Data Engineer</title>
+<meta name="description" content="Shantanu Dashasahastra — Data Engineer. Azure, Databricks, PySpark, and the Power BI foundation underneath it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="site-nav">
+  <span class="nav-mark">SD</span>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">SHANTANU DASHASAHASTRA</p>
+      <h1 class="reveal">Data<br>Engineer<span class="dot">.</span></h1>
+      <p class="hero-sub reveal">Azure, Databricks, and distributed data systems — built on a Power BI foundation, not starting from zero.</p>
+
+      <div class="stat-strip reveal" id="statStrip" aria-live="polite">
+        <div class="stat">
+          <span class="stat-value" id="statRepos">—</span>
+          <span class="stat-label">public repos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">5</span>
+          <span class="stat-label">certifications</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">1</span>
+          <span class="stat-label">flagship platform</span>
+        </div>
+      </div>
+
+      <div class="hero-links reveal">
+        <a href="#projects" class="btn btn-primary">See what I'm building</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="hero-diagram reveal" role="img" aria-label="Animated diagram of a data pipeline: four source systems feed into a Bronze layer, which flows to Silver, then Gold, then out to Power BI and Microsoft Fabric.">
+      <p class="diagram-caption">The platform I designed and am building — hover a stage</p>
+      <svg viewBox="0 0 980 260" xmlns="http://www.w3.org/2000/svg" class="pipeline-svg">
+        <!-- connector lines: sources into bronze -->
+        <g class="connectors">
+          <path d="M110,32 L230,104" class="line line-src"></path>
+          <path d="M110,80 L230,104" class="line line-src"></path>
+          <path d="M110,128 L230,104" class="line line-src"></path>
+          <path d="M110,176 L230,104" class="line line-src"></path>
+          <path d="M370,104 L430,104" class="line line-main"></path>
+          <path d="M570,104 L630,104" class="line line-main"></path>
+          <path d="M770,104 L830,104" class="line line-main"></path>
+        </g>
+
+        <!-- flow dots -->
+        <g class="flow-dots">
+          <circle r="3.5" class="dot dot-amber"><animateMotion dur="2.6s" repeatCount="indefinite" path="M110,32 L230,104" /></circle>
+          <circle r="3.5" class="dot dot-amber"><animateMotion dur="2.6s" begin="0.4s" repeatCount="indefinite" path="M110,80 L230,104" /></circle>
+          <circle r="3.5" class="dot dot-amber"><animateMotion dur="2.6s" begin="0.8s" repeatCount="indefinite" path="M110,128 L230,104" /></circle>
+          <circle r="3.5" class="dot dot-amber"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite" path="M110,176 L230,104" /></circle>
+          <circle r="4" class="dot dot-teal"><animateMotion dur="1.4s" repeatCount="indefinite" path="M370,104 L430,104" /></circle>
+          <circle r="4" class="dot dot-teal"><animateMotion dur="1.4s" begin="0.5s" repeatCount="indefinite" path="M570,104 L630,104" /></circle>
+          <circle r="4" class="dot dot-teal"><animateMotion dur="1.4s" begin="1s" repeatCount="indefinite" path="M770,104 L830,104" /></circle>
+        </g>
+
+        <!-- source nodes -->
+        <g class="node node-source" tabindex="0">
+          <rect x="20" y="16" width="90" height="32" rx="6"></rect>
+          <text x="65" y="36" text-anchor="middle">POS Sales</text>
+        </g>
+        <g class="node node-source" tabindex="0">
+          <rect x="20" y="64" width="90" height="32" rx="6"></rect>
+          <text x="65" y="84" text-anchor="middle">ERP</text>
+        </g>
+        <g class="node node-source" tabindex="0">
+          <rect x="20" y="112" width="90" height="32" rx="6"></rect>
+          <text x="65" y="132" text-anchor="middle">Store Master</text>
+        </g>
+        <g class="node node-source" tabindex="0">
+          <rect x="20" y="160" width="90" height="32" rx="6"></rect>
+          <text x="65" y="180" text-anchor="middle">FX Rates</text>
+        </g>
+
+        <!-- main pipeline nodes -->
+        <g class="node node-stage node-bronze" tabindex="0">
+          <rect x="230" y="66" width="140" height="76" rx="10"></rect>
+          <text x="300" y="98" text-anchor="middle" class="node-title">Bronze</text>
+          <text x="300" y="118" text-anchor="middle" class="node-sub">raw · Delta</text>
+        </g>
+        <g class="node node-stage node-silver" tabindex="0">
+          <rect x="430" y="66" width="140" height="76" rx="10"></rect>
+          <text x="500" y="98" text-anchor="middle" class="node-title">Silver</text>
+          <text x="500" y="118" text-anchor="middle" class="node-sub">cleaned · SCD2</text>
+        </g>
+        <g class="node node-stage node-gold" tabindex="0">
+          <rect x="630" y="66" width="140" height="76" rx="10"></rect>
+          <text x="700" y="98" text-anchor="middle" class="node-title">Gold</text>
+          <text x="700" y="118" text-anchor="middle" class="node-sub">star schema</text>
+        </g>
+        <g class="node node-stage node-out" tabindex="0">
+          <rect x="830" y="66" width="130" height="76" rx="10"></rect>
+          <text x="895" y="98" text-anchor="middle" class="node-title">Power BI</text>
+          <text x="895" y="118" text-anchor="middle" class="node-sub">DirectLake · Fabric</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="about" class="section reveal">
+    <div class="section-inner">
+      <p class="section-eyebrow">About</p>
+      <p class="about-text">
+        I support enterprise analytics for a Fortune 500 consumer goods business — building and maintaining the
+        dashboards that track performance, pricing, and competitive positioning across markets. That work is where
+        I learned to think in data: how it's modeled, where it breaks, and what a business actually needs from it.
+      </p>
+      <p class="about-text">
+        Now I'm going a layer deeper. I'm learning Data Engineering in public — working through Ansh Lamba's
+        project-based tutorials to get the fundamentals solid with real tools, then rebuilding and extending those
+        projects from scratch as I go. Power BI is where I started. Data Engineering is where I'm headed.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt reveal">
+    <div class="section-inner">
+      <p class="section-eyebrow">Skills</p>
+      <div class="skills-grid">
+        <div class="skill-group skill-group-primary">
+          <h3>Data Engineering</h3>
+          <ul class="skill-list">
+            <li>PySpark</li>
+            <li>Databricks (Data Engineering &amp; Advanced Data Engineering)</li>
+            <li>Delta Lake &amp; medallion architecture</li>
+            <li>Azure Data Factory &amp; ADLS Gen2</li>
+            <li>Microsoft Fabric</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud Platforms</h3>
+          <ul class="skill-list">
+            <li>Azure (Data Fundamentals, Data Engineer Associate)</li>
+            <li>AWS (Cloud Practitioner)</li>
+            <li>GCP (Platform Architecture)</li>
+          </ul>
+        </div>
+        <div class="skill-group skill-group-foundation">
+          <h3>Foundation <span class="tag-foundation">where I started</span></h3>
+          <ul class="skill-list">
+            <li>Power BI (DAX, Power Query, data modeling)</li>
+            <li>Enterprise dashboard architecture</li>
+            <li>Stakeholder-facing reporting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section reveal">
+    <div class="section-inner">
+      <p class="section-eyebrow">Certifications</p>
+      <div class="cert-grid">
+        <div class="cert-card cert-card-featured">
+          <div class="cert-badge-text" aria-hidden="true">GROW</div>
+          <div class="cert-info">
+            <h3>GROW Role Accreditation</h3>
+            <p class="cert-issuer">Certified Pyspark Jr. Developer</p>
+            <p class="cert-date">Feb 2026 — valid till Feb 2028</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge-text" aria-hidden="true">DP‑203</div>
+          <div class="cert-info">
+            <h3>Azure Data Engineer Associate</h3>
+            <p class="cert-issuer">Microsoft</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge-text" aria-hidden="true">DP‑900</div>
+          <div class="cert-info">
+            <h3>Azure Data Fundamentals</h3>
+            <p class="cert-issuer">Microsoft</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge-text" aria-hidden="true">AZ‑900</div>
+          <div class="cert-info">
+            <h3>Azure Fundamentals</h3>
+            <p class="cert-issuer">Microsoft</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge-text" aria-hidden="true">CLF</div>
+          <div class="cert-info">
+            <h3>AWS Cloud Practitioner</h3>
+            <p class="cert-issuer">Amazon Web Services</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge-text" aria-hidden="true">DE</div>
+          <div class="cert-info">
+            <h3>Databricks Data Engineer Associate</h3>
+            <p class="cert-issuer">Databricks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section-alt reveal">
+    <div class="section-inner">
+      <p class="section-eyebrow">Building in public</p>
+      <p class="section-note">
+        Honest status: my day-to-day work sits behind an enterprise client's data, so it can't live here.
+        Everything below is what I'm building specifically to prove out Data Engineering, in the open.
+      </p>
+
+      <div class="flagship-card">
+        <span class="status-tag status-tag-active">designed · building</span>
+        <h3>Multi-Region CPG Sales &amp; Finance Lakehouse</h3>
+        <p class="flagship-desc">
+          A lakehouse platform modeled on the kind of business I support — daily reporting on revenue, margins,
+          market share, and promotional performance across regions. POS, ERP, store master, and FX sources land
+          in Bronze on ADLS Gen2, get cleaned and conformed with SCD Type 2 in Silver, and roll up into a star
+          schema in Gold — served to Power BI via DirectLake on Microsoft Fabric.
+        </p>
+        <div class="flagship-stack">
+          <span>ADF</span><span>Databricks</span><span>Delta Lake</span><span>Unity Catalog</span><span>Fabric</span><span>Power BI</span>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <span class="status-tag">learning</span>
+          <h3>Ansh Lamba project series</h3>
+          <p>Working through project-based Data Engineering tutorials — SQL, PySpark, Delta Lake, Unity Catalog — to get real tools under my hands before extending them into original builds.</p>
+        </div>
+        <div class="project-card">
+          <span class="status-tag">next</span>
+          <h3>From tutorial to original</h3>
+          <p>The plan: finish the guided version of each project first, then rebuild it with my own data, my own architecture decisions, and my own write-up — repo by repo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact" class="footer reveal">
+  <div class="footer-inner">
+    <p class="footer-heading">Let's talk data.</p>
+    <div class="footer-links">
+      <a href="https://github.com/shantanudash12" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:you@example.com">Email</a>
+    </div>
+    <p class="footer-fine">Update the LinkedIn and email links above with your real ones.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html><!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shantanu Dashasahastra — Power BI Developer, building toward Data Engineering</title>
 <meta name="description" content="Portfolio of Shantanu Dashasahastra — Power BI developer working toward Data Engineering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -190,4 +474,4 @@
 
 <script src="script.js"></script>
 </body>
-</html>
+</html> -->
